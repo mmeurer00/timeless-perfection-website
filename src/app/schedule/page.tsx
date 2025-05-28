@@ -7,7 +7,7 @@ export default function Schedule() {
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[90vh]">
           {/* Left Side */}
-          <div className="relative h-[60vh] lg:h-auto">
+          <div className="relative h-[50vh] sm:h-[60vh] md:h-[75vh] lg:h-auto">
             <Image
               src="/black-woman-skin.jpg"
               alt="Spa towel and lavender"
@@ -15,23 +15,22 @@ export default function Schedule() {
               className="object-cover w-full h-full"
               priority
             />
-            <div className="absolute inset-0 bg-black bg-opacity-10 px-12 py-20 flex flex-col justify-center items-center text-center">
-              <h1 className="text-5xl md:text-6xl text-white font-serif drop-shadow-lg text-center px-6">
+            <div className="absolute inset-0 bg-black bg-opacity-10 px-4 sm:px-8 py-10 sm:py-20 flex flex-col justify-center items-center text-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl text-white font-serif drop-shadow-lg text-center px-4 sm:px-6">
                 Book an Appointment
               </h1>
-              <p className="text-white text-2xl max-w-md mt-10 bg-opacity-60">
-              Compassionate care, wherever you are. Choose your service and let our team come to you — no stress, no travel, just personalized wellness.
-            </p>
+              <p className="text-white text-base sm:text-lg md:text-xl max-w-md mt-6 sm:mt-10 bg-opacity-60">
+                Compassionate care, wherever you are. Choose your service and let our team come to you — no stress, no travel, just personalized wellness.
+              </p>
             </div>
           </div>
-          
 
           {/* Right Side - Booking Options */}
-          <div className="bg-white px-6 md:px-12 py-20 w-full flex justify-center items-start">
+          <div className="bg-white px-4 sm:px-8 md:px-12 py-12 sm:py-20 w-full flex justify-center items-start">
             <div className="w-full max-w-lg mx-auto">
               <div className="mb-10 text-center">
-                <h3 className="text-3xl font-serif text-brand-teal font-semibold flex items-center justify-center mb-2">
-                  <span className="mr-3">📅</span> Select Appointment
+                <h3 className="text-2xl sm:text-3xl font-serif text-brand-teal font-semibold flex items-center justify-center mb-2">
+                  <span className="mr-2 sm:mr-3">📅</span> Select Appointment
                 </h3>
               </div>
 
@@ -49,10 +48,10 @@ export default function Schedule() {
                 ].map(({ title, time, url }) => (
                   <div
                     key={title}
-                    className="flex justify-between items-center p-6 bg-white rounded-lg border border-gray-200 shadow-sm min-h-[100px]"
+                    className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-6 bg-white rounded-lg border border-gray-200 shadow-sm min-h-[100px] space-y-4 sm:space-y-0"
                   >
                     <div>
-                      <div className="text-lg font-semibold text-brand-teal">{title}</div>
+                      <div className="text-base sm:text-lg font-semibold text-brand-teal">{title}</div>
                       <div className="text-sm text-gray-500">{time}</div>
                     </div>
                     <a
@@ -60,7 +59,7 @@ export default function Schedule() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <button className="bg-brand-yellow hover:bg-brand-teal hover:text-white text-brand-teal font-medium px-5 py-3 text-sm rounded transition-all duration-300">
+                      <button className="bg-brand-yellow hover:bg-brand-teal hover:text-white text-brand-teal font-medium px-5 py-3 text-sm rounded transition-all duration-300 w-full sm:w-auto">
                         BOOK
                       </button>
                     </a>

@@ -77,7 +77,7 @@ export default function Home() {
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.8, delay: 0.3 }}
                     >
-                      <h1 className="text-6xl md:text-7xl font-[Cormorant_Garamond] font-light mb-10 leading-[0.9] text-brand-teal tracking-wide">
+                      <h1 className="text-4xl sm:text-5xl md:text-6xl md:text-7xl font-[Cormorant_Garamond] font-light mb-10 leading-[0.9] text-brand-teal tracking-wide">
                       Compassionate Beauty & Wellness<br />
                       </h1>
                       <h2 className="text-3xl md:text-5xl font-[Cormorant_Garamond] font-light mb-10 leading-[0.9] text-brand-teal tracking-wide"><span className="italic">Tailored with dignity, delivered with care.</span></h2>
@@ -422,7 +422,7 @@ export default function Home() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-6xl font-[Cormorant_Garamond] text-brand-teal font-light mb-6 leading-tight">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-[Cormorant_Garamond] text-brand-teal font-light mb-6 leading-tight">
           Let’s Help Your Residents<br />
           <span className="italic">Feel Their Best</span>
         </h2>

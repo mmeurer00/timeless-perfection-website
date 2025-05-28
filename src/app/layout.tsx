@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
               </div>
             </div>
             
-            <div className="border-t border-brand-blue/30 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
+            <div className="border-t border-brand-blue/30 mt-8 pt-8 flex flex-col md:flex-col md:flex-row justify-between items-center text-sm text-gray-300">
               <p>&copy; 2024 Timeless Perfection. All rights reserved.</p>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <a href="#" className="text-gray-300 hover:text-brand-yellow transition-colors">Instagram</a>
