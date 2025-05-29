@@ -1,5 +1,5 @@
-'use client'
-import Image from 'next/image'
+"use client";
+import Image from "next/image";
 
 export default function Services() {
   return (
@@ -25,14 +25,46 @@ export default function Services() {
         <div className="w-full lg:w-1/2 bg-[#F0F5F8] px-4 sm:px-6 py-8 sm:py-10 space-y-8">
           <div className="space-y-6 text-sm sm:text-base leading-relaxed text-gray-800">
             {[
-              { title: "Haircut & Style", price: "$35", desc: "Trims, shaping, and blow-dry styling that leave your residents feeling fresh and confident — all with gentle, licensed care." },
-              { title: "Shampoo & Blow-Dry", price: "$30", desc: "A soothing scalp cleanse and light dry styling, ideal between cuts or as a relaxing stand-alone service." },
-              { title: "Manicure or Pedicure – Both", price: "$30 / $35 / $60", desc: "Includes nail grooming, shaping, polish, and optional massage. Designed for hygiene and a touch of pampering." },
-              { title: "Polish Removal Only", price: "$10", desc: "Gentle, non-toxic removal of old polish to keep nails healthy and fresh." },
-              { title: "Massage Therapy – 30 or 60 Min", price: "$40 / $70", desc: "Relaxation-focused massages to ease tension, promote circulation, and support mobility." },
-              { title: "Light Makeup Application", price: "$25", desc: "Subtle and flattering makeup for family visits or a confidence boost." },
-              { title: "Facial/Skincare Session", price: "$35", desc: "A calming, non-invasive cleanse and moisturize routine using senior-safe products." },
-              { title: "Group Spa Day Package", price: "Custom", desc: "Tailored bundles for rotating care days or events. Ask us about monthly options!" },
+              {
+                title: "Haircut & Style",
+                price: "$35",
+                desc: "Trims, shaping, and blow-dry styling that leave your residents feeling fresh and confident — all with gentle, licensed care.",
+              },
+              {
+                title: "Shampoo & Blow-Dry",
+                price: "$30",
+                desc: "A soothing scalp cleanse and light dry styling, ideal between cuts or as a relaxing stand-alone service.",
+              },
+              {
+                title: "Manicure or Pedicure – Both",
+                price: "$30 / $35 / $60",
+                desc: "Includes nail grooming, shaping, polish, and optional massage. Designed for hygiene and a touch of pampering.",
+              },
+              {
+                title: "Polish Removal Only",
+                price: "$10",
+                desc: "Gentle, non-toxic removal of old polish to keep nails healthy and fresh.",
+              },
+              {
+                title: "Massage Therapy – 30 or 60 Min",
+                price: "$40 / $70",
+                desc: "Relaxation-focused massages to ease tension, promote circulation, and support mobility.",
+              },
+              {
+                title: "Light Makeup Application",
+                price: "$25",
+                desc: "Subtle and flattering makeup for family visits or a confidence boost.",
+              },
+              {
+                title: "Facial/Skincare Session",
+                price: "$35",
+                desc: "A calming, non-invasive cleanse and moisturize routine using senior-safe products.",
+              },
+              {
+                title: "Group Spa Day Package",
+                price: "Custom",
+                desc: "Tailored bundles for rotating care days or events. Ask us about monthly options!",
+              },
             ].map(({ title, price, desc }) => (
               <div key={title}>
                 <h3 className="font-bold text-base sm:text-lg">{title}</h3>
@@ -52,5 +84,5 @@ export default function Services() {
         </div>
       </div>
     </div>
-  )
+  );
 }

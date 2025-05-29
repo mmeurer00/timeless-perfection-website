@@ -1,5 +1,5 @@
-'use client';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 
 export default function Schedule() {
   return (
@@ -20,7 +20,9 @@ export default function Schedule() {
                 Book an Appointment
               </h1>
               <p className="text-white text-base sm:text-lg md:text-xl max-w-md mt-6 sm:mt-10 bg-opacity-60">
-                Compassionate care, wherever you are. Choose your service and let our team come to you — no stress, no travel, just personalized wellness.
+                Compassionate care, wherever you are. Choose your service and
+                let our team come to you — no stress, no travel, just
+                personalized wellness.
               </p>
             </div>
           </div>
@@ -36,22 +38,60 @@ export default function Schedule() {
 
               <div className="space-y-4 text-left">
                 {[
-                  { title: 'Haircut & Style', time: '1–2 hrs', url: '562VKQZPFWQWJYQP6PB62BB4' },
-                  { title: 'Hair Wash & Dry', time: '30 min', url: '3CVYSN6G4JNBTWNOMGUVOOGL' },
-                  { title: 'Manicure', time: '1 hr', url: 'PWRZYYU4NNCJW5U5ZKQFTMUP' },
-                  { title: 'Pedicure', time: '1 hr 15 min', url: '27ISAGC2DLEKRNPVE2F3K5D3' },
-                  { title: 'Manicure & Pedicure', time: '2 hrs', url: 'BTJYVLUIN7T3X35LDNVYTJG2' },
-                  { title: 'Nail Polish Removal Only', time: '15 mins', url: 'OYNXVNFLKXWOAXWUNGACPVIW' },
-                  { title: 'Massage', time: '30 / 60 mins', url: 'VNH3CHTGGBT3BE3RJKKPEAVR' },
-                  { title: 'Make-up Application', time: '30 mins', url: 'GA5NBQW756YB34WHYJ22JXR4' },
-                  { title: 'Facial/Skin Care', time: '30 mins', url: '2CN4QK6W6QXNF2VY6Q6QPT7T' },
+                  {
+                    title: "Haircut & Style",
+                    time: "1–2 hrs",
+                    url: "562VKQZPFWQWJYQP6PB62BB4",
+                  },
+                  {
+                    title: "Hair Wash & Dry",
+                    time: "30 min",
+                    url: "3CVYSN6G4JNBTWNOMGUVOOGL",
+                  },
+                  {
+                    title: "Manicure",
+                    time: "1 hr",
+                    url: "PWRZYYU4NNCJW5U5ZKQFTMUP",
+                  },
+                  {
+                    title: "Pedicure",
+                    time: "1 hr 15 min",
+                    url: "27ISAGC2DLEKRNPVE2F3K5D3",
+                  },
+                  {
+                    title: "Manicure & Pedicure",
+                    time: "2 hrs",
+                    url: "BTJYVLUIN7T3X35LDNVYTJG2",
+                  },
+                  {
+                    title: "Nail Polish Removal Only",
+                    time: "15 mins",
+                    url: "OYNXVNFLKXWOAXWUNGACPVIW",
+                  },
+                  {
+                    title: "Massage",
+                    time: "30 / 60 mins",
+                    url: "VNH3CHTGGBT3BE3RJKKPEAVR",
+                  },
+                  {
+                    title: "Make-up Application",
+                    time: "30 mins",
+                    url: "GA5NBQW756YB34WHYJ22JXR4",
+                  },
+                  {
+                    title: "Facial/Skin Care",
+                    time: "30 mins",
+                    url: "2CN4QK6W6QXNF2VY6Q6QPT7T",
+                  },
                 ].map(({ title, time, url }) => (
                   <div
                     key={title}
                     className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-6 bg-white rounded-lg border border-gray-200 shadow-sm min-h-[100px] space-y-4 sm:space-y-0"
                   >
                     <div>
-                      <div className="text-base sm:text-lg font-semibold text-brand-teal">{title}</div>
+                      <div className="text-base sm:text-lg font-semibold text-brand-teal">
+                        {title}
+                      </div>
                       <div className="text-sm text-gray-500">{time}</div>
                     </div>
                     <a
@@ -69,7 +109,9 @@ export default function Schedule() {
 
               <div className="mt-12 text-center">
                 <p className="text-xs text-gray-500">Powered by</p>
-                <p className="text-sm font-medium text-brand-teal">Square Appointments</p>
+                <p className="text-sm font-medium text-brand-teal">
+                  Square Appointments
+                </p>
               </div>
             </div>
           </div>
