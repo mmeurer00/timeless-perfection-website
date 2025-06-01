@@ -39,122 +39,56 @@ export default function Home() {
     <div className="w-full font-[Cormorant_Garamond] m-0 p-0">
       <main className="m-0 p-0">
         {/* Hero Section - Enhanced with better spacing and typography */}
-        <section
-          ref={heroRef}
-          className="h-screen sm:h-[200vh] lg:h-[300vh] relative"
-        >
+        <section ref={heroRef} className="h-screen sm:h-[85vh] lg:h-[100vh] relative">
           <div className="sticky top-0 h-screen w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-              {/* Image side - responsive logo sizing */}
               <div className="bg-gradient-to-br from-brand-blue via-brand-blue to-blue-400 flex justify-center items-center relative order-1 lg:order-1">
                 <div className="absolute inset-0 bg-black bg-opacity-10"></div>
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 1.2, ease: "easeOut" }}
-                  className="relative z-10"
-                >
-                  <a
-                    href="/"
-                    className="group relative block w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px]"
-                  >
-                    <Image
-                      src="/logo-white-full.svg"
-                      fill
-                      alt="Timeless Perfection Logo"
-                      className="object-contain transition-opacity duration-300 opacity-100 group-hover:opacity-0"
-                    />
-                    <Image
-                      src="/logo-yellow-full.svg"
-                      fill
-                      alt="Timeless Perfection Logo Yellow"
-                      className="object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-                    />
+                <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 1.2, ease: "easeOut" }} className="relative z-10">
+                  <a href="/" className="group relative block w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px]">
+                    <Image src="/logo-white-full.svg" fill alt="Timeless Perfection Logo" className="object-contain transition-opacity duration-300 opacity-100 group-hover:opacity-0" />
+                    <Image src="/logo-yellow-full.svg" fill alt="Timeless Perfection Logo Yellow" className="object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
                   </a>
                 </motion.div>
               </div>
 
-              {/* Text side - fully responsive typography and spacing */}
               <div className="bg-gradient-to-b from-brand-yellow via-brand-yellow to-yellow-100 relative overflow-hidden order-2 lg:order-2">
-                <motion.div
-                  style={{ y: heroTextY }}
-                  className="min-h-screen sm:min-h-[80vh] md:min-h-[100vh] lg:min-h-[200vh] flex flex-col justify-start items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-8 sm:pt-12 md:pt-16 lg:pt-20 text-center"
-                >
-                  <div className="space-y-6 sm:space-y-8 md:space-y-12 lg:space-y-16 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl w-full">
-                    <motion.div
-                      initial={{ y: 50, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.8, delay: 0.3 }}
-                    >
-                      <h1 className="text-xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-[Cormorant_Garamond] font-light mb-3 sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10 leading-[0.9] text-brand-teal tracking-wide">
+                <motion.div style={{ y: heroTextY }} className="min-h-screen flex flex-col justify-start items-center px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 pt-8 text-center">
+                  <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12 xl:space-y-16 max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl w-full">
+                    <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.3 }}>
+                      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-4 mt-12 leading-[1.1] text-brand-teal tracking-wide">
                         Compassionate Beauty & Wellness
-                        <br />
                       </h1>
-                      <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-[Cormorant_Garamond] font-light mb-3 sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10 leading-[0.9] text-brand-teal tracking-wide">
-                        <span className="italic">
-                          Tailored with dignity, delivered with care.
-                        </span>
+                      <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl italic mb-4 text-brand-teal">
+                        Tailored with dignity, delivered with care.
                       </h2>
-                      <div className="w-12 sm:w-16 md:w-20 lg:w-24 h-1 bg-brand-teal mx-auto mb-3 sm:mb-4 md:mb-6 lg:mb-8 rounded-full"></div>
-                      <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-brand-teal leading-relaxed font-light tracking-wide">
-                        At Timeless Perfection, we believe every senior deserves
-                        to feel radiant, confident, and refreshed — all from the
-                        comfort of home. Our mobile beauty and wellness services
-                        are designed to uplift spirits, enhance hygiene, and
-                        restore dignity, without ever needing to leave your
-                        facility.
+                      <div className="w-12 sm:w-16 md:w-20 h-1 bg-brand-teal mx-auto mb-4 rounded-full"></div>
+                      <p className="text-sm sm:text-base md:text-lg lg:text-xl text-brand-teal leading-relaxed font-light tracking-wide">
+                        Every senior deserves to feel radiant, confident, and cared for — all from the comfort of home. We bring beauty and wellness services that uplift, refresh, and restore dignity.
                       </p>
                     </motion.div>
 
-                    <div className="text-left space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 xl:p-10 shadow-xl">
+                    <div className="text-left space-y-6 sm:space-y-8 bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 shadow-xl">
                       <div>
-                        <h3 className="text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl font-[Cormorant_Garamond] text-brand-teal font-semibold mb-2 sm:mb-3 md:mb-4 lg:mb-6 tracking-wide">
-                          About Our Practice
-                        </h3>
-                        <p className="mb-2 sm:mb-3 md:mb-4 lg:mb-6 text-brand-teal leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg">
-                          We specialize in bringing professional, gentle
-                          self-care services directly to senior residents in
-                          Central and South Florida.
-                        </p>
-                        <p className="mb-2 sm:mb-3 md:mb-4 lg:mb-6 text-brand-teal leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg">
-                          From haircuts to massages, every visit is thoughtfully
-                          tailored to ensure comfort, relaxation, and joy —
-                          without disrupting daily routines or requiring any
-                          setup from your staff.
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-brand-teal mb-3 tracking-wide">About Our Practice</h3>
+                        <p className="text-sm sm:text-base md:text-lg text-brand-teal leading-relaxed">
+                          We bring professional, gentle self-care to senior residents across Florida — with zero setup needed from your staff.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl font-[Cormorant_Garamond] text-brand-teal font-semibold mb-2 sm:mb-3 md:mb-4 lg:mb-6 tracking-wide">
-                          Our Story
-                        </h3>
-                        <p className="mb-2 sm:mb-3 md:mb-4 text-brand-teal leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg">
-                          Timeless Perfection was born from a deeply personal
-                          place — inspired by the love, dignity, and care I
-                          wanted for my own grandmother. What began as a simple
-                          act of compassion has grown into a mission to bring
-                          that same level of thoughtful care to seniors across
-                          Florida.
-                        </p>
-                        <p className="text-brand-teal leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg">
-                          We believe every elder deserves to feel seen, valued,
-                          and pampered. Our mobile services are designed to
-                          restore not just outer beauty, but inner peace and
-                          connection — one gentle visit at a time.
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-brand-teal mb-3 tracking-wide">Our Story</h3>
+                        <p className="text-sm sm:text-base md:text-lg text-brand-teal leading-relaxed">
+                          Inspired by my grandmother’s care, Timeless Perfection began as a personal act of love — and became a mission to uplift seniors across Florida.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl font-[Cormorant_Garamond] text-brand-teal font-semibold mb-2 sm:mb-3 md:mb-4 lg:mb-6 tracking-wide">
-                          Our Philosophy
-                        </h3>
-                        <p className="mb-2 sm:mb-3 md:mb-4 text-brand-teal leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg">
-                          True wellness is more than skin deep. Our goal is to
-                          enhance how your residents feel — physically,
-                          emotionally, and socially — through intentional, kind,
-                          and restorative experiences.
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-brand-teal mb-3 tracking-wide">Our Philosophy</h3>
+                        <p className="text-sm sm:text-base md:text-lg text-brand-teal leading-relaxed">
+                          True wellness goes beyond appearance. Our goal is to uplift your residents — physically, emotionally, and socially.
                         </p>
-                        <p className="text-brand-teal leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg">
+                        <p className="text-sm sm:text-base md:text-lg text-brand-teal font-medium">
                           We do the work. You see the smiles.
                         </p>
                       </div>
@@ -167,127 +101,79 @@ export default function Home() {
         </section>
 
         {/* Services Section - Enhanced mobile responsiveness */}
-        <section
-          ref={servicesRef}
-          className="h-screen sm:h-[200vh] lg:h-[300vh] relative"
-        >
-          <div className="sticky top-0 h-screen w-full">
+        <section ref={servicesRef} className="h-screen sm:h-[100vh] lg:h-[200vh] relative">
+          <div className="sticky top-0 h-[95vh] w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-              {/* Text side - responsive card layout */}
+              {/* LEFT: Text */}
               <div className="bg-gradient-to-b from-brand-white via-white to-gray-50 relative overflow-hidden">
                 <motion.div
                   style={{ y: servicesTextY }}
-                  className="min-h-[200vh] flex flex-col justify-start items-center p-4 sm:p-6 md:p-8 lg:p-12 pt-8 sm:pt-12 md:pt-16 lg:pt-20 text-center"
+                  className="min-h-[200vh] flex flex-col justify-start items-center px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 pt-8 sm:pt-12 md:pt-16 text-center"
                 >
-                  <div className="space-y-6 sm:space-y-8 md:space-y-12 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full">
-                    <motion.div
-                      initial={{ y: 30, opacity: 0 }}
-                      whileInView={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-brand-teal font-semibold uppercase tracking-[0.2em] mb-2 sm:mb-3 md:mb-4">
+                  <div className="space-y-6 sm:space-y-8 md:space-y-10 max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl w-full">
+                    <motion.div initial={{ y: 30, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}>
+                      <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-brand-teal font-semibold uppercase tracking-[0.2em] mb-2">
                         Our Services
                       </h2>
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[Cormorant_Garamond] font-light text-brand-teal mb-3 sm:mb-4 md:mb-6 leading-tight">
-                        Hair, Nails &<br />
-                        Massage
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-teal font-light mb-4">
+                        Hair, Nails & Massage
                       </h3>
-                      <div className="w-12 sm:w-14 md:w-16 h-1 bg-brand-teal mx-auto mb-4 sm:mb-6 md:mb-8 rounded-full"></div>
-                      <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-gray-700">
-                        Complete beauty and wellness services designed to help
-                        you look and feel your absolute best.
+                      <div className="w-12 h-1 bg-brand-teal mx-auto mb-4 rounded-full"></div>
+                      <p className="text-sm sm:text-base md:text-lg text-gray-700">
+                        Beauty and wellness care that helps seniors feel their best — comfortably, safely, and joyfully.
                       </p>
                     </motion.div>
 
                     <div className="space-y-3 sm:space-y-4 md:space-y-6">
-                      {/* Service Cards - Responsive */}
-                      <motion.div
-                        className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-brand-teal"
-                        whileHover={{ y: -5 }}
-                      >
-                        <h4 className="font-bold text-brand-teal text-lg sm:text-xl font-[Cormorant_Garamond] mb-2 sm:mb-3">
-                          Hair Care
-                        </h4>
-                        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                          Gentle shampooing, trimming, and light styling
-                          designed to keep residents feeling fresh and
-                          well-groomed — all without leaving their room.
-                        </p>
-                      </motion.div>
-
-                      <motion.div
-                        className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-brand-teal"
-                        whileHover={{ y: -5 }}
-                      >
-                        <h4 className="font-bold text-brand-teal text-lg sm:text-xl font-[Cormorant_Garamond] mb-2 sm:mb-3">
-                          Nail Care
-                        </h4>
-                        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                          Manicures and pedicures using non-toxic products,
-                          complete with shaping, polish, and optional hand/foot
-                          massage — boosting hygiene, comfort, and self-esteem.
-                        </p>
-                      </motion.div>
-
-                      <motion.div
-                        className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-brand-teal"
-                        whileHover={{ y: -5 }}
-                      >
-                        <h4 className="font-bold text-brand-teal text-lg sm:text-xl font-[Cormorant_Garamond] mb-2 sm:mb-3">
-                          Massage Therapy
-                        </h4>
-                        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                          Restorative massage and non-invasive facials that
-                          reduce tension, improve circulation, and promote calm
-                          — always tailored to the needs of seniors.
-                        </p>
-                      </motion.div>
-
-                      <motion.div
-                        className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-brand-teal"
-                        whileHover={{ y: -5 }}
-                      >
-                        <h4 className="font-bold text-brand-teal text-lg sm:text-xl font-[Cormorant_Garamond] mb-2 sm:mb-3">
-                          Makeup Application
-                        </h4>
-                        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                          Subtle and flattering makeup for family visits,
-                          photos, or a little boost in confidence.
-                        </p>
-                      </motion.div>
-
-                      <motion.div
-                        className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-brand-teal"
-                        whileHover={{ y: -5 }}
-                      >
-                        <h4 className="font-bold text-brand-teal text-lg sm:text-xl font-[Cormorant_Garamond] mb-2 sm:mb-3">
-                          Facial/Skincare Session
-                        </h4>
-                        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                          A calming, non-invasive cleanse and moisturize routine
-                          using senior-safe products.
-                        </p>
-                      </motion.div>
+                      {[{
+                        title: "Hair Care",
+                        desc: "Shampooing, trims, and light styling — all from the comfort of their room."
+                      }, {
+                        title: "Nail Care",
+                        desc: "Non-toxic manicures and pedicures with optional massage for comfort and hygiene."
+                      }, {
+                        title: "Massage Therapy",
+                        desc: "Restorative massage and facials to calm the body and lift the spirit."
+                      }, {
+                        title: "Makeup Application",
+                        desc: "Light makeup for visits, photos, or just a boost in confidence."
+                      }, {
+                        title: "Facials/Skincare",
+                        desc: "Gentle skincare with senior-safe products for a fresh, clean glow."
+                      }].map(({ title, desc }, index) => (
+                        <motion.div
+                          key={index}
+                          className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-brand-teal"
+                          whileHover={{ y: -4 }}
+                        >
+                          <h4 className="text-lg sm:text-xl font-semibold text-brand-teal mb-2 font-[Cormorant_Garamond]">
+                            {title}
+                          </h4>
+                          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                            {desc}
+                          </p>
+                        </motion.div>
+                      ))}
                     </div>
                   </div>
                 </motion.div>
               </div>
 
-              {/* Image side - responsive image sizing */}
+              {/* RIGHT: Image */}
               <div className="bg-gradient-to-br from-brand-blue via-brand-blue to-blue-400 justify-center items-center relative order-2 lg:order-1 hidden lg:flex">
                 <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 <motion.div
                   initial={{ scale: 0.9, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.8 }}
-                  className="relative z-10 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[750px] px-4 sm:px-6 lg:px-0"
+                  className="relative z-10 w-full max-w-[600px] px-4"
                 >
                   <Image
                     src="/intake-interview.jpg"
-                    alt="Professional massage therapy services"
-                    width={750}
-                    height={850}
-                    className="rounded-2xl sm:rounded-3xl shadow-2xl w-full h-auto"
+                    alt="Wellness consultation"
+                    width={600}
+                    height={600}
+                    className="rounded-2xl shadow-2xl w-full h-auto"
                   />
                 </motion.div>
               </div>
@@ -295,138 +181,65 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Studio Showcase - Fixed mobile responsiveness */}
-        <section
-          ref={studioRef}
-          className="h-screen sm:h-[200vh] lg:h-[300vh] relative"
-        >
-          <div className="sticky top-0 h-screen w-full">
+        <section ref={studioRef} className="h-screen sm:h-[160vh] lg:h-[220vh] relative">
+          <div className="sticky top-0 h-[92vh] w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-              {/* Image side - hidden when stacked, visible when side by side */}
+              {/* Image side */}
               <div className="bg-gradient-to-br from-brand-blue via-brand-blue to-blue-400 justify-center items-center relative order-2 lg:order-1 hidden lg:flex">
                 <div className="absolute inset-0 bg-black bg-opacity-10"></div>
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
-                  className="relative z-10 w-full max-w-[450px] xl:max-w-[500px]"
-                >
-                  <Image
-                    src="/temples-older-woman.jpg"
-                    alt="Peaceful wellness studio environment"
-                    width={500}
-                    height={600}
-                    className="rounded-3xl shadow-2xl w-full h-auto"
-                  />
+                <motion.div initial={{ scale: 0.9, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{ duration: 0.8 }} className="relative z-10 w-full max-w-[450px] xl:max-w-[500px]">
+                  <Image src="/temples-older-woman.jpg" alt="Peaceful wellness studio environment" width={500} height={600} className="rounded-3xl shadow-2xl w-full h-auto" />
                 </motion.div>
               </div>
 
-              {/* Text side - fully responsive layout */}
+              {/* Text side */}
               <div className="bg-gradient-to-b from-brand-yellow via-brand-yellow to-yellow-100 relative overflow-hidden order-1 lg:order-2">
-                <motion.div
-                  style={{ y: studioTextY }}
-                  className="min-h-[200vh] flex flex-col justify-start items-center p-4 sm:p-6 md:p-8 lg:p-12 pt-8 sm:pt-12 md:pt-16 lg:pt-20 text-center"
-                >
-                  <div className="space-y-6 sm:space-y-8 md:space-y-12 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full">
-                    <motion.div
-                      initial={{ y: 30, opacity: 0 }}
-                      whileInView={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold uppercase tracking-[0.2em] mb-2 sm:mb-3 md:mb-4 text-brand-teal">
+                <motion.div style={{ y: studioTextY }} className="min-h-[200vh] flex flex-col justify-start items-center px-4 sm:px-6 md:px-10 lg:px-16 pt-8 text-center">
+                  <div className="space-y-6 sm:space-y-8 md:space-y-10 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-3xl w-full">
+                    <motion.div initial={{ y: 30, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}>
+                      <h2 className="text-sm sm:text-base md:text-lg font-semibold uppercase tracking-[0.2em] mb-2 text-brand-teal">
                         Our Approach
                       </h2>
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[Cormorant_Garamond] font-light mb-3 sm:mb-4 md:mb-6 text-brand-teal leading-tight">
-                        Comfort & Care
-                        <br />
-                        Wherever You Are
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl text-brand-teal font-light mb-3 leading-tight">
+                        Comfort & Care Anywhere
                       </h3>
-                      <div className="w-12 sm:w-14 md:w-16 h-1 bg-brand-teal mx-auto mb-4 sm:mb-6 md:mb-8 rounded-full"></div>
-                      <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-brand-teal">
-                        Bringing the spa experience to you — every detail of our
-                        mobile service is designed to provide your residents
-                        with exceptional care in the comfort of their own
-                        community.
+                      <div className="w-12 h-1 bg-brand-teal mx-auto mb-4 rounded-full"></div>
+                      <p className="text-sm sm:text-base md:text-lg text-brand-teal leading-relaxed">
+                        Spa-quality care in the comfort of your community — no setup needed.
                       </p>
                     </motion.div>
 
                     <div className="space-y-3 sm:space-y-4 md:space-y-6">
-                      {/* Feature Cards - Responsive */}
-                      <motion.div
-                        className="bg-white bg-opacity-30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-white border-opacity-50"
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-brand-teal font-[Cormorant_Garamond]">
-                          Tailored for Wellness
-                        </h4>
-                        <p className="text-brand-teal leading-relaxed text-sm sm:text-base">
-                          We specialize in gentle, senior-friendly techniques
-                          that promote relaxation, circulation, and well-being —
-                          all delivered by licensed professionals with
-                          experience in elder care.
-                        </p>
-                      </motion.div>
-
-                      <motion.div
-                        className="bg-white bg-opacity-30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-white border-opacity-50"
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-brand-teal font-[Cormorant_Garamond]">
-                          Stress-Free Setup
-                        </h4>
-                        <p className="text-brand-teal leading-relaxed text-sm sm:text-base">
-                          No special equipment or space required. We bring
-                          everything we need and adapt seamlessly to your
-                          facility's layout.
-                        </p>
-                      </motion.div>
-
-                      <motion.div
-                        className="bg-white bg-opacity-30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-white border-opacity-50"
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-brand-teal font-[Cormorant_Garamond]">
-                          Sanitary & Safe
-                        </h4>
-                        <p className="text-brand-teal leading-relaxed text-sm sm:text-base">
-                          We follow strict hygiene protocols and use non-toxic
-                          products, maintaining the highest standards of
-                          cleanliness during every visit.
-                        </p>
-                      </motion.div>
-
-                      <motion.div
-                        className="bg-white bg-opacity-30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-white border-opacity-50"
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-brand-teal font-[Cormorant_Garamond]">
-                          Consistent, Compassionate Care
-                        </h4>
-                        <p className="text-brand-teal leading-relaxed text-sm sm:text-base">
-                          Our licensed professionals are trained not just in
-                          beauty and wellness, but also in compassionate
-                          communication and senior sensitivity.
-                        </p>
-                      </motion.div>
-
-                      <motion.div
-                        className="bg-white bg-opacity-30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-white border-opacity-50"
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-brand-teal font-[Cormorant_Garamond]">
-                          Flexible Group Scheduling
-                        </h4>
-                        <p className="text-brand-teal leading-relaxed text-sm sm:text-base">
-                          We make it easy to book individual sessions or full
-                          "spa day" rotations — perfect for recurring wellness
-                          events or family visitation weekends.
-                        </p>
-                      </motion.div>
+                      {[{
+                        title: "Tailored for Wellness",
+                        desc: "Relaxing techniques delivered by licensed senior-care professionals."
+                      }, {
+                        title: "Stress-Free Setup",
+                        desc: "We bring everything — no space or prep required."
+                      }, {
+                        title: "Sanitary & Safe",
+                        desc: "Strict hygiene with non-toxic, senior-friendly products."
+                      }, {
+                        title: "Compassionate Care",
+                        desc: "Our pros are trained in senior communication and comfort."
+                      }, {
+                        title: "Flexible Scheduling",
+                        desc: "Book individuals or full spa day rotations for your residents."
+                      }].map(({ title, desc }, index) => (
+                        <motion.div
+                          key={index}
+                          className="bg-white bg-opacity-30 backdrop-blur-sm rounded-xl p-4 sm:p-5 md:p-6 border border-white border-opacity-50"
+                          whileHover={{ scale: 1.02 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <h4 className="font-semibold text-base sm:text-lg mb-2 text-brand-teal font-[Cormorant_Garamond]">
+                            {title}
+                          </h4>
+                          <p className="text-sm sm:text-base text-brand-teal leading-relaxed">
+                            {desc}
+                          </p>
+                        </motion.div>
+                      ))}
                     </div>
                   </div>
                 </motion.div>
